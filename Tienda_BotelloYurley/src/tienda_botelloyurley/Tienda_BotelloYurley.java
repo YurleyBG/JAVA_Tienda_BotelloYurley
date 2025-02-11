@@ -31,6 +31,7 @@ public class Tienda_BotelloYurley {
     public static void main(String[] args) {
         
         ArrayList<Tienda_BotelloYurley> productos = new ArrayList<>();
+        
         productos.add(new Tienda_BotelloYurley(1, "Botella de agua", 1.50, 50));
         productos.add(new Tienda_BotelloYurley(2, "Cafe", 15.00, 30));
         productos.add(new Tienda_BotelloYurley(3, "Pollo", 35.00, 15));
@@ -119,7 +120,7 @@ public class Tienda_BotelloYurley {
                     for (Tienda_BotelloYurley producto : productos) {
                         producto.verProductos();
                     }
-                     System.out.println();
+                    System.out.println();
                     System.out.println("_____ ELIMINAR PRODUCTO______");
                     System.out.println("Ingrese la id del producto que desea eliminar:");
                     int idecita ;
@@ -130,8 +131,12 @@ public class Tienda_BotelloYurley {
                             productos.remove(producto);
                             break;
                         }
-                         producto.verProductos();
+                       
                     }
+                    for (Tienda_BotelloYurley producto : productos) {
+                        producto.verProductos();
+                    }
+                    break;
 
                 case 4 : 
                     System.out.println("_____PRODUCTOS DISPONIBLES______");
